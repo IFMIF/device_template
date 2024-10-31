@@ -1,0 +1,2 @@
+# Functions for sub or asub records
+function(template_asub_routine)

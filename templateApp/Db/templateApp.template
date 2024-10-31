@@ -1,0 +1,27 @@
+record(ao, "$(PR):VSet") {
+  field(DESC, "Voltage setpoint")
+  field(FLNK,"$(PR):VoutSub")
+  field(PREC, "3")
+  field(EGU, "V")
+  field(DRVH, "$(V_DRVH)")
+  field(DRVL, "0.0")
+  field(HOPR, "$(V_HOPR)")
+  field(LOPR, "0.0")
+}
+
+record(aSub, "$(PR):VoutSub") {
+  field(DESC, "Compute output")
+  field(SNAM, "template_asub_routine")
+  field(INPA, "$(PR):VSet")
+  field(FTA,  "DOUBLE")
+  field(NOA,  "1")
+  field(OUTA, "$(PR):Vout")
+  field(FTVA, "DOUBLE")
+  field(NOVA, "1")
+}
+
+record(ai, "$(PR):Vout") {
+  field(DESC, "Voltage output")
+  field(PREC, "3")
+  field(EGU, "V")
+}
