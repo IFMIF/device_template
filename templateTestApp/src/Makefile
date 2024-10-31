@@ -14,7 +14,7 @@ templateTestApp_DBD += base.dbd
 templateTestApp_DBD += templateApp.dbd
 
 # Link in the code from our support library
-templateTestApp_LIBS += calc
+templateTestApp_LIBS += calc templateApp
 
 # templateTestApp_registerRecordDeviceDriver.cpp derives from templateTestApp.dbd
 templateTestApp_SRCS += templateTestApp_registerRecordDeviceDriver.cpp
